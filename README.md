@@ -52,7 +52,7 @@ A custom about the traditional Chinese festival, Mid-Autumn Festival, prevails i
 
 为了满足用户的这些需求，我们设计的软件提供了以下的服务：
 
-![image](https://github.com/Green08/Mooncake-Gambling/blob/main/photo/image-20210930171850880.png)
+![image](https://img-community.csdnimg.cn/images/aea11a087af1418bb713662c9cb6e655.png)
 
 
 
