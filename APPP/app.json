@@ -1,0 +1,15 @@
+{
+  "pages":[
+   
+    "pages/logins/login",
+    "pages/person/person"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#001526",
+    "navigationBarTitleText": "中秋博饼",
+    "navigationBarTextStyle":"white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

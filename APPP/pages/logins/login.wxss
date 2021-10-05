@@ -1,0 +1,7 @@
+/* pages/logins/login.wxss */
+image{
+    box-sizing: border-box;
+    width:414px;
+    height:896px;
+    z-index: -1;
+}
