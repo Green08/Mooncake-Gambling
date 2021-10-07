@@ -1,7 +1,6 @@
 <template>
   <div class="rule-container">
     <div class="box"></div>
-    <div class="title">博饼状元</div>
     <img src="../assets/start-into.png" alt="" class="btn-into"  @click="goGame">
     <div class="btn-rule" @click="goRule"></div>
   </div>
@@ -37,16 +36,12 @@ export default {
   .box {
     height: 60%;
   }
-  .title {
-    font-size: 50px;
-    font-weight: bold;
-    color: #FEE7BD;
-    line-height: 100px;
-  }
   .btn-into {
     position: absolute;
-    bottom: 500px;
+    bottom: 250px;
     width: 350px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .btn-rule {
     width: 400px;
