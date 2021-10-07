@@ -11,7 +11,7 @@ export default {
   methods: {
     goGame () {
       this.$router.push({
-        name: 'Game'
+        name: 'Mode'
       })
     },
     goRule () {

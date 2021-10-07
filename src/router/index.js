@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Start from '../views/Start.vue'
 import Game from '../views/Game.vue'
 import Rule from '../views/Rule.vue'
+import Mode from '../views/Mode.vue'
 
 Vue.use(VueRouter)
 
@@ -16,6 +17,11 @@ const routes = [
     path: '/rule',
     name: 'Rule',
     component: Rule
+  },
+  {
+    path: '/mode',
+    name: 'Mode',
+    component: Mode
   },
   {
     path: '/',

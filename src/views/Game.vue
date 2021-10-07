@@ -1,5 +1,6 @@
 <template>
   <div class="play">
+    
     <!-- <img src="../assets/title.png" alt="" class="title"> -->
     <!-- <img src="../assets/rabbit.png" alt="" class="rabbit"> -->
     <div class="bowl-container" @click="handleStart" id="bowl">
@@ -13,7 +14,9 @@
     <div class="nav">单机模式</div>
     <img src="../assets/yyy.png" alt="" class="btn-yyy"  @click="handleStart">
     <img src="../assets/博饼记录.png" alt="" class="bbjl">
-    <div class="record-box"></div>
+    <div class="record-box">
+      
+    </div>
   </div>
 </template>
 
@@ -30,9 +33,11 @@ export default {
       rank: -1,
       awardTitle: '',
       game: new Game(),
-      loading: false
+      loading: false,
+      content: ''
     }
   },
+  
   methods: {
     handleStart () {
       if (this.loading) {
@@ -44,6 +49,15 @@ export default {
       this.awardTitle = res.awardTitle
       this.setDice()
     },
+    //comment
+    postComment() {
+        var comment = { content: this.result }
+        var list = JSON.parse(localStorage.getItem('czssb') || '[]')
+        list.unshift(comment)
+        localStorage.setItem('czssb', JSON.stringify(list))
+        this.$emit('func')
+    },
+    
     // 获取六个骰子的位置
     getPosition () {
       const positions = [1, 2, 3, 4, 5, 6, 7, 8]
