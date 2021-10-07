@@ -1,4 +1,4 @@
 module.exports = {
-  publicPath: '/mid-bo-cake/',
+  publicPath: './',
   productionSourceMap: false
 }
