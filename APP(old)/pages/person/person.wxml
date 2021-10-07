@@ -1,0 +1,5 @@
+<!--pages/person/person.wxml-->
+<!--
+    微信小程序个人页面图片标签
+--><image class="" src="https://img-blog.csdnimg.cn/76e3af8317004077b28bddf73878fc79.png" mode="aspectFit" lazy-load="false" binderror="" bindload="" />
+  

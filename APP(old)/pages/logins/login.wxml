@@ -1,0 +1,9 @@
+<!--
+    微信小程序启动页面图片标签
+--><image class="" src="https://img-blog.csdnimg.cn/76e3af8317004077b28bddf73878fc79.png" mode="aspectFill" lazy-load="false" binderror="" bindload="" />
+
+
+<!--开始游戏按钮-->
+
+<view class='day-weather' bindtap='onTapDayWeather'>
+</view>
