@@ -1,8 +1,0 @@
-/* pages/logins/login.wxss */
-image{
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    position:fixed; 
-    background-size:100% 100%;
-}
