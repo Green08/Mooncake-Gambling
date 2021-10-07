@@ -44,7 +44,8 @@ export default {
     line-height: 100px;
   }
   .btn-into {
-    margin-top: 80px;
+    position: absolute;
+    bottom: 500px;
     width: 350px;
   }
   .btn-rule {
