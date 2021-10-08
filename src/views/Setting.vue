@@ -1,0 +1,100 @@
+<template>
+  <div class="setting">
+    <div class="nav">设置</div>
+    <div class="sz">option
+        <div class="option">
+          <div class="title">音乐</div>
+          <img src="../assets/s-on.png" alt="" class="switch">
+          <div class="line"></div>
+        </div>
+        <div class="option">
+          <div class="title">音效</div>
+          <img src="../assets/s-on.png" alt="" class="switch">
+          <div class="line"></div>
+        </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Setting',
+  components: {
+  },
+  data() {
+    return {
+    }
+  },
+  
+  methods: {
+
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+@import "../styles/animation.scss";
+
+.setting {
+  position: relative;
+  height: 100vh;
+  padding:0px;
+  margin:0px;
+  // overflow: hidden;
+  background: url("../assets/bg1@3x.png") no-repeat;
+  background-position:center;
+  background-size: cover;
+}
+.nav{
+  width: 200px;
+  height: 80px;
+  margin-top: 88px;
+  margin-left: 50px;
+  position: absolute;
+  font-size: 35px;
+  font-weight: 400;
+  text-align: left;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+.sz{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 500px;
+  top:196px;
+  background: rgba(0,0,0,0.50);
+  border: 2px solid #dfb47c;
+  border-radius: 50px;
+}
+.option{
+  display: flex;
+  width:100%;
+  height:40px;
+}
+.title{
+  position: absolute;
+  top: 50px;
+  left: 10%;
+  font-size: 36px;
+  color: #ffffff;
+}
+.switch{
+  width: 102px;
+  height: 68px;
+  position: absolute;
+  top: 45px;
+  right: 10%;
+}
+.line{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top:123px;
+  width: 88%;
+  height: 2px;
+  border: 2px solid #b6b6b6;
+}
+
+</style>
