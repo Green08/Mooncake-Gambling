@@ -19,11 +19,11 @@
           <div class='dict'>{{index+1}}</div>
           <div>获得了</div>
           <div>{{item.name}}</div>
-         <div class='imgout'>
+          <div class='imgout'>
             <div v-for='(val,e) in item.imglist' :key='e'>
-              <img :src="require('../assets/'+(e+1)+'.png')" alt="">
+              <img :src="require('../assets/'+(val)+'.png')" alt="">
             </div>
-         </div>
+          </div>
       </div>
     </div>
   </div>
@@ -46,7 +46,8 @@ export default {
       loading: false,
       content: '',
       isShow: false,
-      jllist:[]
+      jllist:[],
+      imglist:[]
     }
   },
   
@@ -65,15 +66,6 @@ export default {
       this.setDice()
       this.isShow= false
     },
-    //comment
-    // postComment() {
-    //     var comment = { content: this.result }
-    //     var list = JSON.parse(localStorage.getItem('czssb') || '[]')
-    //     list.unshift(comment)
-    //     localStorage.setItem('czssb', JSON.stringify(list))
-    //     this.list.unshift(comment)
-    //     this.content=''
-    // },
     
     // 获取六个骰子的位置
     getPosition () {
@@ -102,22 +94,17 @@ export default {
     showAwardTitle () {
       setTimeout(() => {
         this.loading = false
-        // alert(this.awardTitle)
-        console.log(1111)
         this.newTitle=this.awardTitle
+        this.imglist=this.result
         this.jllist.push({
           name:this.newTitle,
-          imglist:[1,2,3,4,5,6]
+          imglist:this.imglist
         })
-         console.log(this.newTitle)
+        console.log(this.newTitle)
+        console.log(this.imglist)
         this.isShow= true
       }, 1200)
     },
-    go2Rule () {
-      this.$router.push({
-        name: 'Rule'
-      })
-    }
   }
 }
 </script>
@@ -318,7 +305,7 @@ export default {
   height:30px;
 }
 .dict{
-  width:30px;
+  width:10px;
   text-align:center;
 }
 </style>
