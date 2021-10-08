@@ -15,6 +15,16 @@
     <img src="../assets/博饼记录.png" alt="" class="bbjl">
     <div class="award" v-show="isShow">{{this.newTitle}}</div>
     <div class="record-box">
+      <div class='listone' v-for='(item,index) in jllist' :key='index'>
+          <div class='dict'>{{index+1}}</div>
+          <div>获得了</div>
+          <div>{{item.name}}</div>
+         <div class='imgout'>
+            <div v-for='(val,e) in item.imglist' :key='e'>
+              <img :src="require('../assets/'+(e+1)+'.png')" alt="">
+            </div>
+         </div>
+      </div>
     </div>
   </div>
 </template>
@@ -35,11 +45,15 @@ export default {
       game: new Game(),
       loading: false,
       content: '',
-      isShow: false
+      isShow: false,
+      jllist:[]
     }
   },
   
   methods: {
+    getlist(){
+
+    },
     handleStart () {
       if (this.loading) {
         return
@@ -89,7 +103,13 @@ export default {
       setTimeout(() => {
         this.loading = false
         // alert(this.awardTitle)
+        console.log(1111)
         this.newTitle=this.awardTitle
+        this.jllist.push({
+          name:this.newTitle,
+          imglist:[1,2,3,4,5,6]
+        })
+         console.log(this.newTitle)
         this.isShow= true
       }, 1200)
     },
@@ -276,6 +296,29 @@ export default {
   background: rgba(0,0,0,0.30);
   border: 2px solid #dfb47c;
   border-radius: 50px;
+  overflow-y:auto;
+  padding:60px 20px;
+  box-sizing: border-box;
 }
-
+.listone{
+  width:100%;
+  height:40px;
+  color:#fff;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.imgout{
+  width:160px;
+  display:flex;
+  height:40px;
+  align-items: center;
+}
+.listone img{
+  height:30px;
+}
+.dict{
+  width:30px;
+  text-align:center;
+}
 </style>
