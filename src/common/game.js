@@ -10,7 +10,6 @@ export default class Game {
     }
     return this._judgeAward()
   }
-
   // 统计结果
   _countResult() {
     this.award = new Array(6).fill(0)
