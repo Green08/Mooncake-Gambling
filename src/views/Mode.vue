@@ -3,10 +3,10 @@
     <div class="container">
       <img src="../assets/djms.png" alt="" class="button"  @click="goDjms">
       <img src="../assets/grzx.png" alt="" class="button"  @click="goGrzx">
-      <img src="../assets/cjfj.png" alt="" class="button"  @click="goGrzx">
-      <img src="../assets/jrfj.png" alt="" class="button"  @click="goGrzx">
-      <img src="../assets/bz.png" alt="" class="button"  @click="goGrzx">
-      <img src="../assets/sz.png" alt="" class="button"  @click="goGrzx">
+      <img src="../assets/cjfj.png" alt="" class="button"  @click="goDjms">
+      <img src="../assets/jrfj.png" alt="" class="button"  @click="goDjms">
+      <img src="../assets/bz.png" alt="" class="button"  @click="goHelp">
+      <img src="../assets/sz.png" alt="" class="button"  @click="goSetting">
     </div>
   </div>
 </template>
@@ -17,6 +17,21 @@ export default {
     goDjms () {
       this.$router.push({
         name: 'Game'
+      })
+    },
+    goGrzx (){
+      this.$router.push({
+        name: 'Grzx'
+      })
+    },
+    goSetting (){
+      this.$router.push({
+        name: 'Setting'
+      })
+    },
+    goHelp (){
+      this.$router.push({
+        name: 'Help'
       })
     }
   }
