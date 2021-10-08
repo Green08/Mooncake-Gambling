@@ -26,7 +26,6 @@ export default {
 <style lang="scss" scoped>
 @import "../styles/animation.scss";
 
-
 .mode {
   position: absolute;
   height: 100vh;
@@ -40,13 +39,13 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 25%;
+  margin-top: 30%;
 }
 .button{
   width: 312px;
   height: 138px;
   justify-content: center;
-  margin: 30px;
+  flex:0 1 auto;
+  margin: 50px 30px;
 }
-
 </style>
