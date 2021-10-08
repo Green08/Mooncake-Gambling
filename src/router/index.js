@@ -4,6 +4,9 @@ import Start from '../views/Start.vue'
 import Game from '../views/Game.vue'
 import Rule from '../views/Rule.vue'
 import Mode from '../views/Mode.vue'
+import Grzx from '../views/Grzx.vue'
+import Setting from '../views/Setting.vue'
+import Help from '../views/Help.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +30,21 @@ const routes = [
     path: '/',
     name: 'Start',
     component: Start
+  },
+  {
+    path: '/grzx',
+    name: 'Grzx',
+    component: Grzx
+  },
+  {
+    path: '/setting',
+    name: 'Setting',
+    component: Setting
+  },
+  {
+    path: '/help',
+    name: 'Help',
+    component: Help
   }
 ]
 
