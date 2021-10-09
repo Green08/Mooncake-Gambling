@@ -1,7 +1,8 @@
 <template>
   <div class="setting">
     <div class="nav">设置</div>
-    <div class="sz">option
+    <div class="sz">
+      <div class="box">
         <div class="option">
           <div class="title">音乐</div>
           <img src="../assets/s-on.png" alt="" class="switch">
@@ -12,6 +13,7 @@
           <img src="../assets/s-on.png" alt="" class="switch">
           <div class="line"></div>
         </div>
+      </div>
     </div>
   </div>
 </template>
@@ -68,10 +70,14 @@ export default {
   border: 2px solid #dfb47c;
   border-radius: 50px;
 }
-.option{
+.box{
   display: flex;
+  flex-direction:column
+}
+.option{
+  position: relative;
   width:100%;
-  height:40px;
+  height:100px;
 }
 .title{
   position: absolute;
@@ -93,8 +99,7 @@ export default {
   transform: translateX(-50%);
   top:123px;
   width: 88%;
-  height: 2px;
-  border: 2px solid #b6b6b6;
+  border: 1px solid #b6b6b6;
 }
 
 </style>

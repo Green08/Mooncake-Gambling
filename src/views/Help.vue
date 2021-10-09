@@ -1,11 +1,9 @@
 <template>
   <div class="help">
     <div class="nav">帮 助</div>
-    <div class="user">
-        <div class="pic"></div>
-    </div>
-    <img src="../assets/bz.png" alt="" class="bz">
-    <div class="record"></div>
+    <div class="rule"></div>
+    <img src="../assets/yxgz.png" alt="" class="yxgz">
+    <img src="../assets/rules.png" alt="" class="rules">
   </div>
 </template>
 
@@ -50,26 +48,7 @@ export default {
   color: #ffffff;
   letter-spacing: 2px;
 }
-.user{
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  height: 208px;
-  top:196px;
-  background: rgba(0,0,0,0.00);
-  border: 2px solid #dfb47c;
-  border-radius: 50px;
-}
-.pic{
-  position: absolute;
-  top:36px;
-  left:34px;
-  width: 136px;
-  height: 136px;
-  background: #ffffff;
-  border-radius: 50%;
-}
+
 .grjl{
   position: absolute;
   left: 50%;
@@ -79,15 +58,32 @@ export default {
   height: 98px;
   z-index: 1;
 }
-.record{
+.rule{
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top:508px;
+  top:242px;
   width: 90%;
-  height: 55%;
+  height: 700px;
   background: rgba(0,0,0,0.30);
   border: 2px solid #dfb47c;
   border-radius: 50px;
+}
+.yxgz{
+  position: absolute;
+  width: 220px;
+  height: 98px;
+  top: 194px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.rules{
+  position: absolute;
+  top:350px;
+  width: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 22px;
 }
 </style>
