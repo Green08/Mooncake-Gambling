@@ -1,16 +1,21 @@
 <template>
   <div class="setting">
+    <img src="../assets/back.svg" alt="" class="back" @click="goBack">
     <div class="nav">设置</div>
     <div class="sz">
       <div class="box">
         <div class="option">
           <div class="title">音乐</div>
-          <img src="../assets/s-on.png" alt="" class="switch">
+          <div class="switch">
+            <SSwitch v-model="value" text="on|off"></SSwitch>
+          </div>
           <div class="line"></div>
         </div>
         <div class="option">
           <div class="title">音效</div>
-          <img src="../assets/s-on.png" alt="" class="switch">
+          <div class="switch">
+            <SSwitch v-model="value" text="on|off"></SSwitch>
+          </div>
           <div class="line"></div>
         </div>
       </div>
@@ -19,17 +24,22 @@
 </template>
 
 <script>
+import SSwitch from '../common/Switch.vue'
 export default {
   name: 'Setting',
   components: {
+    SSwitch
   },
   data() {
     return {
+      value:''
     }
   },
   
   methods: {
-
+    goBack () {
+      this.$router.go(-1)
+    }
   }
 }
 </script>
@@ -47,11 +57,17 @@ export default {
   background-position:center;
   background-size: cover;
 }
+.back{
+  position: absolute;
+  margin-top: 88px;
+  margin-left: 35px;
+  height: 45px;
+}
 .nav{
   width: 200px;
   height: 80px;
   margin-top: 88px;
-  margin-left: 50px;
+  margin-left: 100px;
   position: absolute;
   font-size: 35px;
   font-weight: 400;
@@ -90,7 +106,7 @@ export default {
   width: 102px;
   height: 68px;
   position: absolute;
-  top: 45px;
+  top: 50px;
   right: 10%;
 }
 .line{
@@ -101,5 +117,4 @@ export default {
   width: 88%;
   border: 1px solid #b6b6b6;
 }
-
 </style>

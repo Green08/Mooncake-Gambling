@@ -10,6 +10,7 @@
       <div class="dice dice4 dice-position5"></div>
       <div class="dice dice4 dice-position6"></div>
     </div>
+    <img src="../assets/back.svg" alt="" class="back" @click="goBack">
     <div class="nav">单机模式</div>
     <img src="../assets/yyy.png" alt="" class="btn-yyy"  @click="handleStart">
     <img src="../assets/博饼记录.png" alt="" class="bbjl">
@@ -52,6 +53,9 @@ export default {
   },
   
   methods: {
+    goBack () {
+      this.$router.go(-1)
+    },
     getlist(){
 
     },
@@ -92,6 +96,7 @@ export default {
       }, 200)
     },
     showAwardTitle () {
+      // Set a delay so that the result does not appear until the animation ends
       setTimeout(() => {
         this.loading = false
         this.newTitle=this.awardTitle
@@ -234,12 +239,17 @@ export default {
     }
   }
 }
-
+.back{
+  position: absolute;
+  margin-top: 88px;
+  margin-left: 35px;
+  height: 45px;
+}
 .nav{
   width: 200px;
   height: 80px;
   margin-top: 88px;
-  margin-left: 50px;
+  margin-left: 100px;
   position: absolute;
   font-size: 35px;
   font-weight: 400;

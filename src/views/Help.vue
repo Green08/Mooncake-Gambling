@@ -1,5 +1,6 @@
 <template>
   <div class="help">
+    <img src="../assets/back.svg" alt="" class="back" @click="goBack">
     <div class="nav">帮 助</div>
     <div class="rule"></div>
     <img src="../assets/yxgz.png" alt="" class="yxgz">
@@ -18,7 +19,9 @@ export default {
   },
   
   methods: {
-
+    goBack () {
+      this.$router.go(-1)
+    }
   }
 }
 </script>
@@ -36,11 +39,17 @@ export default {
   background-position:center;
   background-size: cover;
 }
+.back{
+  position: absolute;
+  margin-top: 88px;
+  margin-left: 35px;
+  height: 45px;
+}
 .nav{
   width: 200px;
   height: 80px;
   margin-top: 88px;
-  margin-left: 50px;
+  margin-left: 100px;
   position: absolute;
   font-size: 35px;
   font-weight: 400;
