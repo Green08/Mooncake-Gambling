@@ -7,7 +7,7 @@
 <script>
 export default {
   created () {
-    document.title = '中秋博饼'
+    document.title = '博饼状元'
   }
 }
 </script>
